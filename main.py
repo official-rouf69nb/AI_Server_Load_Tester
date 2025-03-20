@@ -171,9 +171,9 @@ def run_concurrent_test():
             df = pd.DataFrame(results)
             df.to_csv(os.path.join(SUMMARY_DIR, f"concurrent_{folder}_w{workers}.csv"), index=False)
             all_results.extend(results)
-
-            # Pause briefly between tests to allow system to stabilize
-            time.sleep(1)
+            #
+            # # Pause briefly between tests to allow system to stabilize
+            # time.sleep(1)
 
     return all_results
 
