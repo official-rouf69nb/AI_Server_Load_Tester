@@ -15,7 +15,7 @@ INPUT_DIR = "test_images"
 OUTPUT_DIR =  os.path.join("output", "images")
 SUMMARY_DIR = os.path.join("output", "summary")
 
-FOLDERS = ["w512", "w1080", "w1920", "w2560", "w3840"]
+FOLDERS = [name for name in os.listdir(INPUT_DIR) if os.path.isdir(os.path.join(INPUT_DIR, name))]
 MAX_CONCURRENT = os.getenv("MAX_CONCURRENT")
 MAX_CONCURRENT = int(MAX_CONCURRENT) if MAX_CONCURRENT else 10
 print(f"Max concurrent: ${MAX_CONCURRENT}")
